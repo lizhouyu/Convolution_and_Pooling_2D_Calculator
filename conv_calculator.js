@@ -1,5 +1,3 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 const input_height = document.getElementById('input_height');
 const input_width = document.getElementById('input_width');
 const input_kernel_size = document.getElementById('input_kernel_size');
@@ -11,6 +9,7 @@ const btn_convTrans = document.getElementById('btn_convTrans');
 const input_output_height = document.getElementById('input_output_height');
 const input_output_width = document.getElementById('input_output_width');
 const btn_refill = document.getElementById('btn_refill');
+const btn_clear = document.getElementById('btn_clear');
 
 function btnConvClick()
 {
@@ -59,9 +58,19 @@ function btnRefillClick()
     input_output_width.value = "";
 }
 
+function btnClearClick()
+{
+    input_height.value = "";
+    input_width.value = "";
+    input_kernel_size.value = "";
+    input_stride.value = "";
+    input_padding.value = "";
+    input_output_height.value = "";
+    input_output_width.value = "";
+}
+
 btn_conv.addEventListener('click', btnConvClick);
 btn_pool.addEventListener('click', btnPoolClick);
 btn_convTrans.addEventListener('click', btnConvTransClick);
 btn_refill.addEventListener('click', btnRefillClick);
-/******/ })()
-;
+btn_clear.addEventListener('click', btnClearClick);
